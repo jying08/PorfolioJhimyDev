@@ -1,0 +1,65 @@
+---
+import Html from "../icos/Html.astro";
+import Css from "../icos/Css.astro";
+import JavaScripI from "../icos/JavaScrip.astro";
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-[#003159] text-while",
+    icon: Html,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#003159] text-while",
+    icon: Css,
+  },
+  JavaScrip: {
+    name: "JavaScrip",
+    class: "bg-[#003159] text-while",
+    icon: JavaScripI,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Juego ARKANOID",
+    description:
+      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/jying08/JuegoARKANOID",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScrip],
+  },
+  {
+    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    image: "https://via.placeholder.com/300x200",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScrip],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class=" text-2xl font-semibold text-yellow-200 mb-2 ">{title}</h3>
+      <p class=" text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4  flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
+              <tag.icon class=" size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class=" rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}

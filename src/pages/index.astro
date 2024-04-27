@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../icos/LinkedIn.astro";
+import GitHub from "../icos/GitHub.astro";
+import Mail from "../icos/Mail.astro";
+import Code from "../icos/Code.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Container from "../components/Container.astro";
+import Briefcase from "../icos/Briefcase.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Porfolio de jhimydev - Desarrollador y Programador Web con 15 años de Expreriencia"
+  description="Contrata a jhimydev para crear tu aplicacion web o movil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones unicas"
+>
+  <main class="px-4">
+    <Container class="py-44 pb-32">
+      <img
+        src="https://scontent.flim15-1.fna.fbcdn.net/v/t39.30808-6/298674081_102493122575535_5373394028571181895_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFjQTwWd9Dkr2hQ4-LruxXUsoGo0LQBFm-ygajQtAEWb3ksaG21qUw_KOCz1hNHhgXk09JXIo649e23r-jcLEMM&_nc_ohc=mbuBVGXGm0QQ7kNvgHdqRHs&_nc_ht=scontent.flim15-1.fna&oh=00_AfCTcoU8vJPD4kuaKrNzP80U20mdL6iIgjlu4Km_rvi0nA&oe=6631DB78"
+        alt="jhimydev photo"
+        class="rounded-full w-12 h-12 mb-4"
+      />
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hey soy Jhimy <a
+          href="https://linkedin.com/in/jhimy-diestra-gaspar-9b1510245"
+          ><Badge>Disponible para trabajar</Badge></a
+        >
+      </h1>
+      <h2 class=" text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+15 años de experincia.</span><span class="text-yellow-200/90">
+          Desarrallador Web y Creador de Contenido.</span
+        ><span class="text-red-200/90"> De Peru Lima.</span>
+        <span class="opacity-75"
+          >Especializado en crear aplicaciones unicas</span
+        >
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill
+          href="https://linkedin.com/in/jhimy-diestra-gaspar-9b1510245"
+        >
+          <LinkedIn class=" size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill
+          href="https://linkedin.com/in/jhimy-diestra-gaspar-9b1510245"
+        >
+          <GitHub class=" size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill
+          href="https://linkedin.com/in/jhimy-diestra-gaspar-9b1510245"
+        >
+          <Mail class=" size-4 md:size-6" />
+          diestragasparjhimy@gmail.com
+        </SocialPill>
+      </nav>
+    </Container>
+
+    <Container id="experiencia">
+      <h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class=" size-7"/>
+        Experincia laboral
+      </h2>
+      <Experience />
+    </Container>
+
+    <Container id="proyectos">
+      <h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class=" size-7"/>
+        Proyectos
+      </h2>
+      <Projects />
+    </Container>
+  </main>
+</Layout>
